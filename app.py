@@ -8,8 +8,7 @@ model = joblib.load("alloy_model_multi.pkl")
 scaler = joblib.load("scaler_multi.pkl")
 
 # Define feature names (same order as training)
-features = ['Al', 'Be', 'C', 'Co', 'Cr', 'Cu', 'Fe', 'Mg', 'Mn', 'Mo', 
-            'Ni', 'O', 'P', 'Pb', 'Si', 'Sn', 'Ti', 'V', 'W', 'Zn']
+features = joblib.load("features_list.pkl")
 
 st.title("Alloy Strength Prediction App")
 st.write("Enter alloy composition (% of each element) to predict Yield Strength & UTS.")
